@@ -1,0 +1,152 @@
+.site-header{
+    background: #131619;
+    height: 66px;
+    position: relative;
+    z-index: 99;
+}
+
+.container{
+	width: 1188px;
+    height: 66px;
+    margin: 0 auto;
+}
+
+
+
+.site-branding{
+	color:#fff;
+	float: left;
+	width:200px;
+	border:1px solid red;
+}
+
+.site-title{
+	color:#fff;
+}
+
+
+#site-navigation{
+	border: 1px solid green;
+	width: 750px;
+    height: 66px;
+    float: right;
+    position: relative;
+    z-index: 1;
+}
+
+
+.menu-toggle{
+	display: none;
+}
+
+#primary-menu{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#primary-menu li{
+	width: 105px;
+    height: 66px;
+    text-align: center;
+    line-height: 66px;
+    float: left;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+#primary-menu a{
+	color: #fff;
+    font-size: 16px;
+    display: block;
+    line-height: 66px;
+    text-decoration: none;
+}
+
+.current-menu-item,
+.hover-menu-item{
+	background: #c00;
+    color: #fff;
+}
+
+.menu-item-has-children{
+	position: relative;
+}
+
+.sub-menu{
+	display: none;
+	width:105px;
+	position: absolute;
+	top:66px;
+	left: 0;
+	z-index: 999;
+	background: #c00;
+}
+
+#primary-menu .sub-menu li{
+	list-style: none;
+	height: 48px;
+}
+
+#primary-menu .sub-menu a{
+	font-size: 14px;
+	line-height:48px;
+}
+
+#primary-menu .sub-menu li:hover{
+	background: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+	height: 255px;
+	background: #a5a5a5;
+	overflow: hidden
+}
+.footer  a{
+	color: #fff;
+}
+.footer  a:hover{
+	color: #fff;
+}
+.footer .contain {
+	width: 1188px;
+	margin: 50px auto 0;
+	background: url(images/erweima.jpg) no-repeat;
+	height: 205px;
+	font-size: 14px;
+	line-height: 32px;
+	color: #fff;
+	text-align: right;
+}
+.copyright {
+	height: 75px;
+	background: url(images/copyright_bg.jpg) repeat-x #18191d;
+	text-align: center;
+	font-size: 14px;
+	line-height: 75px;
+	color: #fff;
+}
+.wrap{width:800px;margin-left: 388px;}
