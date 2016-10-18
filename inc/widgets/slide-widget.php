@@ -42,6 +42,8 @@ class SHNG_Slide_Widget extends SHNG_Posts_Widget {
             while ($posts->have_posts()){
                 $posts->the_post();
                 $post_title = esc_attr(get_the_title());
+
+                $post_title = mb_substr($post_title, 0,12,'UTF-8');
                 $post_url = get_permalink();
                 $post_img = get_post_img(null,808,560);
                 $post_description = trim(get_the_excerpt());
