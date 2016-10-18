@@ -22,6 +22,15 @@
 <body <?php body_class(); ?>>
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container clear">
+
+			<?php 
+			if(get_theme_mod( 'shng_logo',true)){ ?>
+			<div class="site-branding">
+				<img id="site-logo" src="<?php echo get_theme_mod('shng_logo',true); ?>" />
+			</div>
+				
+
+			<?php }else{ ?>
 			<div class="site-branding">
 				<?php
 				if ( is_front_page() && is_home() ) : ?>
@@ -37,6 +46,13 @@
 				<?php
 				endif; ?>
 			</div><!-- .site-branding -->
+
+
+			<?php }
+
+
+			 ?>
+			
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'shng' ); ?></button>

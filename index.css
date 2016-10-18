@@ -49,26 +49,9 @@
 	overflow: hidden
 }
 .index_intro .intro_text{
-	width:500px;
-	height: 120px; font-size:16px; line-height:180%; color:#fff;
+	width:540px;
+	height: 120px; font-size:16px; color:#fff;
 	margin: 40px 30px 0 30px; float:left;
-	overflow: hidden
-}
-.index_intro .intro_buy{
-	width:100px;
-	height: 120px; 
-	margin: 40px 0px 0px 30px; float:left;
-	overflow: hidden
-}
-.index_intro .intro_buy .weather{
-	width:100px;
-	height: 50px;
-	margin: 0px; 
-	overflow: hidden
-}
-.index_intro .intro_buy .ticket{
-	width:100px;
-	height: 50px;
-	margin: 20px 0px 0px 0px;
-	overflow: hidden
+	overflow: hidden;
+	line-height: 24px;
 }

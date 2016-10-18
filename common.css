@@ -5,6 +5,10 @@
     z-index: 99;
 }
 
+#site-logo{
+    margin-top: 10px;
+}
+
 .container{
 	width: 1188px;
     height: 66px;
