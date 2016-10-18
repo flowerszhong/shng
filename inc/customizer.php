@@ -121,7 +121,7 @@ function shng_index_intro($wp_customize)
 
 
 	$wp_customize->add_setting('intro_image',array(
-		'default'=> get_template_directory_uri() . '/img/logo.png',
+		'default'=> get_template_directory_uri() . '/assets/images/intro_image.gif',
 	));
 
 

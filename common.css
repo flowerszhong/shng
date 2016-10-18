@@ -1,3 +1,7 @@
+body{
+	font-family: "Microsoft YaHei" ! important;
+}
+
 .site-header{
     background: #131619;
     height: 66px;
@@ -11,7 +15,6 @@
 
 .container{
 	width: 1188px;
-    height: 66px;
     margin: 0 auto;
 }
 
@@ -21,7 +24,6 @@
 	color:#fff;
 	float: left;
 	width:200px;
-	border:1px solid red;
 }
 
 .site-title{
@@ -30,7 +32,6 @@
 
 
 #site-navigation{
-	border: 1px solid green;
 	width: 750px;
     height: 66px;
     float: right;
@@ -113,17 +114,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 .footer {
 	height: 255px;
 	background: #a5a5a5;
@@ -154,3 +144,11 @@
 	color: #fff;
 }
 .wrap{width:800px;margin-left: 388px;}
+
+
+#colophon{
+	background: #18191d;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+}

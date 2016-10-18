@@ -21,7 +21,7 @@ class SHNG_Carousel_Widget extends SHNG_Posts_Widget {
         extract($args);
         extract($instance);
 
-        $title = "<h2><a href='$more'>$title</a></h2>";
+        $title = "<h2><a href=$more>$title</a></h2>";
         $en_title = "<h3>$en_title</h3>";
 
         echo htmlspecialchars_decode(esc_html($before_widget));
@@ -32,19 +32,26 @@ class SHNG_Carousel_Widget extends SHNG_Posts_Widget {
 
         if ($posts->have_posts()){ 
 
-            echo '<div class="carousel-content box-content">';
-            echo '<ul class="shng-carousels  role="carousel">';
+            echo '<div class="carousel-content box-content container">';
+            echo  '<div class="hd">
+                    <a class="next"></a>
+                    <a class="prev"></a>
+                  </div>';
+            echo '<ul class="shng-carousels carousel-list  role="carousel">';
 
             while ($posts->have_posts()){
                 $posts->the_post();
                 $post_title = esc_attr(get_the_title());
                 $post_url = get_permalink();
+                $post_id = get_the_id();
+                $post_img = get_post_img($post_id,$width="386",$height="330");
                 ?>
                 <li class="carousel-item">
                 <a href="<?php echo $post_url; ?>" class="carousel-link">
                 <span class="carousel-title"">
                     <?php echo $post_title; ?>
                 </span>
+                <img src="<?php echo $post_img; ?>" width="386" height="330" />
                 </a>
                 </li>
                 

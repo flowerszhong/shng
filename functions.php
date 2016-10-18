@@ -182,6 +182,7 @@ function get_post_img( $id = null,$width="200",$height="150") {
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/widgets/abstract-widget.php';
 require get_template_directory() . '/inc/widgets/carousel-widget.php';
+require get_template_directory() . '/inc/widgets/slide-widget.php';
 
 
 /**
