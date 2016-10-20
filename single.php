@@ -9,13 +9,13 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area container">
 		<main id="main" class="site-main" role="main">
 
 		<?php
 		while ( have_posts() ) : the_post();
 
-			get_template_part( 'template-parts/content', get_post_format() );
+			get_template_part( 'parts/content', get_post_format() );
 
 			the_post_navigation();
 
@@ -28,8 +28,14 @@ get_header(); ?>
 		?>
 
 		</main><!-- #main -->
+
+		<div class="secondary">
+			<?php get_sidebar(); ?>
+		</div>
+
+		<div class="clear"></div>
+
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

@@ -152,3 +152,63 @@ body{
 	text-align: center;
 	line-height: 50px;
 }
+
+
+.site-main{
+	float: right;
+	width: 850px;
+    overflow: hidden;
+}
+
+.secondary{
+	width: 260px;
+    float: left;
+    overflow: hidden;
+}
+
+
+.entry-title{
+	font-size: 24px;
+	font-weight: normal;
+	line-height: 150%;
+	color:#c00;
+	text-align: center;
+}
+
+.entry-meta{
+	margin: 20px auto 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #ccc;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.entry-content{
+	margin:10px 0 20px 0;
+}
+
+.entry-content p{
+	font-size: 14px;
+	line-height: 200%;
+	text-indent: 2em;
+	margin: 10px 0;
+}
+
+.widget-title{
+	padding-top: 10px;
+    padding-bottom: 10px;
+    height: 30px;
+    font-size: 20px;
+    vertical-align: baseline;
+    overflow: hidden;
+}
+
+.widget-title-box{
+	display: inline-block;
+	width:20px;
+	height: 20px;
+	margin-right: 20px;
+	background: #c00;
+	vertical-align: baseline;
+}
