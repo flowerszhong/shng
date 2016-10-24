@@ -183,6 +183,7 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/widgets/abstract-widget.php';
 require get_template_directory() . '/inc/widgets/carousel-widget.php';
 require get_template_directory() . '/inc/widgets/slide-widget.php';
+require get_template_directory() . '/inc/widgets/list-widget.php';
 
 
 /**

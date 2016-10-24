@@ -21,7 +21,10 @@ class SHNG_List_Widget extends SHNG_Posts_Widget {
         extract($args);
         extract($instance);
 
-        $title = $title .'<a href="' . $more . '">查看更多</a>';
+        if(!empty($more)){
+            $title = $title .'<a class="more" href="' . $more . '">[查看更多]</a>';
+        }
+
 
         echo htmlspecialchars_decode(esc_html($before_widget));
         echo  htmlspecialchars_decode(esc_html($before_title . $title  . $after_title));
@@ -31,32 +34,30 @@ class SHNG_List_Widget extends SHNG_Posts_Widget {
 
         if ($posts->have_posts()){ 
 
-            echo '<div class="carousel-content box-content container">';
-            echo  '<div class="hd">
-                    <a class="next"></a>
-                    <a class="prev"></a>
-                  </div>';
-            echo '<ul class="shng-carousels carousel-list  role="carousel">';
+            echo '<ul class="shng-post-list post-list  role="list">';
 
             while ($posts->have_posts()){
                 $posts->the_post();
                 $post_title = esc_attr(get_the_title());
+                $post_title = mb_substr($post_title, 0,12,'UTF-8');
+
+
                 $post_url = get_permalink();
-                $post_id = get_the_id();
-                $post_img = get_post_img($post_id,$width="386",$height="330");
+
+                $m = get_the_time('m');
+                $d = get_the_time('d');
                 ?>
-                <li class="carousel-item">
-                <a href="<?php echo $post_url; ?>" class="carousel-link">
-                <span class="carousel-title"">
-                    <?php echo $post_title; ?>
+                <li class="list-item">
+                <a href="<?php echo $post_url; ?>" class="list-link">
+                <span class="post-date"">
+                    <b><?php echo $m .  "/" ; ?></b> <?php echo $d; ?>
                 </span>
-                <img src="<?php echo $post_img; ?>" width="386" height="330" />
+                <?php echo $post_title; ?>
                 </a>
                 </li>
                 
             <?php }
             echo '</ul>';
-            echo '</div>';
 
             } 
             wp_reset_postdata();
@@ -67,10 +68,10 @@ class SHNG_List_Widget extends SHNG_Posts_Widget {
 
     protected function get_default() {
         return array(
-            'title'          => '神农谷周边',
-            'en_title'       => 'Shen Nong Valley & Travel Around',
-            'more'           => 'http://quickweb.mzh.ren',
-            'posts_per_page' => 12,
+            'title'          => '最新动态',
+            'en_title'       => '',
+            'more'           => '',
+            'posts_per_page' => 5,
             'orderby'        => 'date',
             'category'       => array(),
             'post_tag'       => array(),
