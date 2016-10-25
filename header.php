@@ -64,3 +64,10 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+
+	<?php if(!(is_home() or is_front_page())){ ?>
+
+	<div class="breadcrumbs container">
+		<?php echo custom_breadcrumbs(); ?>
+	</div>
+	<?php } ?>

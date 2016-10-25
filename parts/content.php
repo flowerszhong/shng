@@ -20,7 +20,7 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php shng_posted_on(); ?>
+		<i class="iconfont">&#xe600;</i>&nbsp;作者：<?php the_author(); ?>&nbsp;&nbsp;&nbsp;&nbsp;<i class="iconfont">&#xe601;</i>&nbsp;时间：<?php the_time('Y-m-d'); ?>&nbsp;&nbsp;&nbsp;&nbsp;<i class="iconfont">&#xe602;</i>&nbsp;访问：298
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>

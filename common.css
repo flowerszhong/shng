@@ -256,3 +256,65 @@ body{
 	position: relative;
 	left: 5px;
 }
+
+
+.breadcrumbs{
+	height: 70px;
+    line-height: 70px;
+    width: 1188px;
+    margin: 0 auto 30px;
+    border-bottom: 2px solid #c00;
+    overflow: hidden;
+}
+
+
+
+.archive-item{
+	border-bottom: 1px solid #f0f0f0;
+	margin: 15px 0;
+	padding: 15px 0;
+}
+
+.archive-item-thumb{
+	float: left;
+	width:250px;
+}
+
+.archive-item-content{
+	margin-left: 250px;
+}
+
+.archive-item-header h3 a{
+	font-size: 18px;
+	font-weight: normal;
+	color: #000;
+}
+
+.archive-item-meta{
+	margin: 15px 0;
+}
+
+.archive-item-description{
+	color: #999;
+	    font-size: 14px;
+	    line-height: 24px;
+}
+
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1460443385'); /* IE9*/
+  src: url('iconfont.eot?t=1460443385#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1460443385') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1460443385') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1460443385#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
