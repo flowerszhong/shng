@@ -114,6 +114,9 @@ body{
 
 
 
+
+
+
 .footer {
 	height: 255px;
 	background: #a5a5a5;
@@ -318,3 +321,133 @@ body{
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
+
+
+
+
+.wp-pagenavi {
+    padding: 20px 0;
+    color: #AAA;
+}
+
+.wp-pagenavi a {
+    background-color: #C00;
+    color: #FFF;
+    margin: 5px;
+    padding: 5px 10px;
+}
+
+.wp-pagenavi a:hover {
+    color: #FFF;
+}
+
+.wp-pagenavi .pages {
+    background-color: #F2F2F2;
+    border: 1px solid #EEE;
+    margin: 5px;
+    padding: 4px 8px;
+}
+
+.wp-pagenavi .current {
+    border: 1px solid #EEE;
+    margin: 5px;
+    padding: 4px 8px;
+    color:#c00;
+}
+
+.cp-pagenavi {
+    margin: -5px;
+    padding: 20px 20px 20px 0;
+    border-bottom: 1px solid #EEE;
+}
+
+.cp-pagenavi a {
+    background-color: #CCC;
+    color: #ffffff;
+    margin: 3px;
+    padding: 4px 8px;
+}
+
+.cp-pagenavi a:hover {
+    background-color: #444;
+}
+
+.cp-pagenavi .current,
+.cp-pagenavi .current-comment-page {
+    border: 1px solid #EEE;
+    margin: 3px;
+    padding: 4px 8px;
+    color: #c00;
+}
+
+
+.post-navigation{
+	margin-top: 20px;
+	padding-top:20px;
+	border-top: 1px solid #eee;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.post-navigation h2{
+	font-size: 18px;
+	margin-bottom: 10px;
+	font-weight: normal;
+}
+
+.nav-previous,
+.nav-next{
+	float: left;
+	width:49%;
+	font-size: 14px;
+}
+
+.nav-next{
+	float: right;
+	text-align: right;
+}
+
+
+.site-banner img{
+	width:100%;
+}
+
+
+
+#respond { 
+background: #ececec;
+padding:0 5px 0 5px;
+}
+
+/* Highlight active form field */
+
+#respond input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+ 
+#respond input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+
+#author { 
+font-family: Lobster, "Lobster 1.4", "Droid Sans", Arial;
+font-size: 16px;
+color:#1d1d1d; 
+letter-spacing:.1em;
+} 
+
+#url  { 
+color: #21759b;
+font-family: "Luicida Console", "Courier New", "Courier", monospace; 
+} 

@@ -11,7 +11,6 @@ get_header(); ?>
 
 	<div id="primary" class="content-area container">
 		<main id="main" class="site-main" role="main">
-
 		<?php
 		if ( have_posts() ) : 
 			/* Start the Loop */
@@ -25,11 +24,8 @@ get_header(); ?>
 				get_template_part( 'parts/content', 'archive' );
 
 			endwhile;
-
-			the_posts_navigation();
-
+			wp_shng_pagination();
 		else :
-
 			get_template_part( 'parts/content', 'none' );
 
 		endif; ?>
@@ -40,9 +36,6 @@ get_header(); ?>
 		</div>
 
 		<div class="clear"></div>
-
-
-
 	</div><!-- #primary -->
 
 <?php

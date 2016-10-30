@@ -15,9 +15,13 @@ get_header(); ?>
 		<?php
 		while ( have_posts() ) : the_post();
 
-			get_template_part( 'parts/content', get_post_format() );
+			get_template_part( 'parts/content', 'single' );
 
-			the_post_navigation();
+			the_post_navigation( array(
+	            'prev_text'                  => __( '上一篇: %title' ),
+	            'next_text'                  => __( '下一篇: %title' ),
+	        ));
+
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :

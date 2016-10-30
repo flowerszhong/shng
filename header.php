@@ -63,6 +63,45 @@
 
 	</header><!-- #masthead -->
 
+
+	<div class="site-banner" id="banner">
+		<?php 
+
+		if(is_page()){
+			echo get_the_post_thumbnail();
+		}
+
+		if(is_category()){
+			$category = get_the_category();
+			$banner_url = $category[0]->category_description;
+			$is_img = @getimagesize($banner_url);
+			if($is_img){
+				echo "<img src='$banner_url' />";
+			}
+		}
+
+
+		if(is_singular('post')){
+			$categories = get_the_category();
+
+			$banner_url = "";
+			foreach ($categories as $cat) {
+				$description = $cat->category_description;
+				if(@getimagesize($description)){
+					$banner_url = $description;
+					break;
+				}
+			}
+
+			if(!empty($banner_url)){
+				echo "<img src='$banner_url' />";
+			}
+
+		}
+
+		 ?>
+	</div>
+
 	<div id="content" class="site-content">
 
 	<?php if(!(is_home() or is_front_page())){ ?>
