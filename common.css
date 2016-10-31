@@ -299,8 +299,43 @@ body{
 
 .archive-item-description{
 	color: #999;
-	    font-size: 14px;
-	    line-height: 24px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.media-item{
+	margin-bottom: 15px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.media-thumbnail{
+	float: left;
+	width: 90px;
+	height: 60px;
+	overflow: hidden;
+}
+
+
+
+.media-content{
+	width: 170px;
+    height: 60px;
+    text-indent: 16px;
+    background: #c7c7c7;
+    float: right;
+    overflow: hidden;
+}
+
+.media-content h3{
+	font-size: 16px;
+    line-height: 30px;
+    font-weight: normal;
+    margin-top: 3px;
+}
+
+.media-content p{
+	font-size: 12px;
 }
 
 
@@ -431,7 +466,6 @@ padding:0 5px 0 5px;
   margin: 5px 1px 3px 0px;
   border: 1px solid #DDDDDD;
 }
- 
  
 #respond input[type=text]:focus, textarea:focus {
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
