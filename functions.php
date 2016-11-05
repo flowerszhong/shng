@@ -44,7 +44,9 @@ function shng_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'shng' ),
+        'primary' => esc_html__( 'Primary', 'shng' ),
+        'footer' => esc_html__( 'Footer', 'shng' ),
+		'friendlinks' => esc_html__( 'Friend Links', 'shng' ),
 	) );
 
 	/*

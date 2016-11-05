@@ -30,7 +30,7 @@
 			</div>
 				
 
-			<?php }else{ ?>
+			<?php } else { ?>
 			<div class="site-branding">
 				<?php
 				if ( is_front_page() && is_home() ) : ?>

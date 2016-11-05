@@ -201,14 +201,31 @@ function render_slider()
         $url_name = $slide_prefix . 'url_' . $i;
         $slide = get_theme_mod( $setting_name );
         $url = get_theme_mod( $url_name );
-
-        $slide_dom .= '<li><a href="' .$url . '"><img src="' . $slide . '"></a></li>';
+        if(!empty($slide)){
+            $slide_dom .= '<li><a href="' .$url . '"><img src="' . $slide . '"></a></li>';
+        }
     
     }
     $slide_dom .= '</ul>';
     echo $slide_dom;
 }
 
+
+function render_slider_controls()
+{
+    $slide_dom = '<ul>';
+    for ($i=1; $i <=5 ; $i++) { 
+        $slide_prefix = 'shng_slide_';
+        $setting_name = $slide_prefix . $i;
+        $slide = get_theme_mod( $setting_name );
+        if(!empty($slide)){
+            $slide_dom .= '<li></li>';
+        }
+    
+    }
+    $slide_dom .= '</ul>';
+    echo $slide_dom;
+}
 
 
 

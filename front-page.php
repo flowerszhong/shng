@@ -19,8 +19,6 @@ get_header(); ?>
 get_template_part( 'parts/index', 'slide' );
 get_template_part( 'parts/index', 'intro' );
 dynamic_sidebar( 'home' );
-get_template_part( 'parts/index', 'gallery' );
-
  ?>
 
 

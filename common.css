@@ -104,19 +104,6 @@ body{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer {
 	height: 255px;
 	background: #a5a5a5;
@@ -138,14 +125,24 @@ body{
 	color: #fff;
 	text-align: right;
 }
-.copyright {
-	height: 75px;
-	background: url(images/copyright_bg.jpg) repeat-x #18191d;
-	text-align: center;
-	font-size: 14px;
-	line-height: 75px;
-	color: #fff;
+
+.footer-menu{
+
 }
+.friendlinks li,
+.footer-menu li{
+	float:right;
+	margin-left: 10px;
+}
+
+.friendlinks{
+	clear: both;
+}
+
+.address{
+	clear:both;
+}
+
 .wrap{width:800px;margin-left: 388px;}
 
 
@@ -154,6 +151,15 @@ body{
 	height: 50px;
 	text-align: center;
 	line-height: 50px;
+}
+
+.site-info{
+	color:#fff;
+}
+
+.site-info a:link,
+.site-info a:visited{
+    color: #fff;
 }
 
 
