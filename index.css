@@ -246,7 +246,6 @@
 
 .index-gallery{
 	margin: 120px 0px 0px 0px;
-    height: 520px;
     background: #e6e6e6;
     padding: 5%;
     z-index: 1;
@@ -257,8 +256,6 @@
 .index-gallery ul{
 	list-style-type: none;
     margin: 0 auto;
-    height: 100%;
-    width: 1605px;
     display: block;
 }
 
