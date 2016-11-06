@@ -9,9 +9,9 @@ class SHNG_Grid_Widget extends SHNG_Posts_Widget {
     }
 
     function __construct() {
-        $widget_ops  = array('classname' => 'shng-grid-widget index-gallery posts-box', 'description' =>'首页网格挂件');
+        $widget_ops  = array('classname' => 'shng-grid-widget index-gallery posts-box', 'description' =>'首页-网格挂件');
         $control_ops = array('width' => 'auto', 'height' => 'auto');
-        parent::__construct('shng-grid-widget', '神农谷-首页网格挂件', $widget_ops, $control_ops);
+        parent::__construct('shng-grid-widget', '神农谷-首页-网格挂件', $widget_ops, $control_ops);
     }
 
 

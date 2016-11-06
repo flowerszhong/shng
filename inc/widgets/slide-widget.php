@@ -9,9 +9,9 @@ class SHNG_Slide_Widget extends SHNG_Posts_Widget {
     }
 
     function __construct() {
-        $widget_ops  = array('classname' => 'shng-slide-widget posts-box', 'description' =>'幻灯片轮播挂件');
+        $widget_ops  = array('classname' => 'shng-slide-widget posts-box', 'description' =>'首页-幻灯片轮播挂件');
         $control_ops = array('width' => 'auto', 'height' => 'auto');
-        parent::__construct('shng-slide-widget', '神农谷-幻灯片挂件', $widget_ops, $control_ops);
+        parent::__construct('shng-slide-widget', '神农谷-首页-幻灯片挂件', $widget_ops, $control_ops);
     }
 
     function widget($args, $instance) {

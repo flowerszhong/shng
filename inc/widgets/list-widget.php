@@ -9,9 +9,9 @@ class SHNG_List_Widget extends SHNG_Posts_Widget {
     }
 
     function __construct() {
-        $widget_ops  = array('classname' => 'shng-list-widget posts-box', 'description' =>'文章列表挂件');
+        $widget_ops  = array('classname' => 'shng-list-widget posts-box', 'description' =>'边栏-文章列表挂件');
         $control_ops = array('width' => 'auto', 'height' => 'auto');
-        parent::__construct('shng-list-widget', '神农谷-文章列表挂件', $widget_ops, $control_ops);
+        parent::__construct('shng-list-widget', '神农谷-边栏-文章列表挂件', $widget_ops, $control_ops);
     }
 
 

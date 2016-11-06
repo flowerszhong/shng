@@ -9,9 +9,9 @@ class SHNG_Carousel_Widget extends SHNG_Posts_Widget {
     }
 
     function __construct() {
-        $widget_ops  = array('classname' => 'shng-carousel-widget posts-box', 'description' =>'图片轮播效果组件');
+        $widget_ops  = array('classname' => 'shng-carousel-widget posts-box', 'description' =>'首页-图片轮播效果挂件');
         $control_ops = array('width' => 'auto', 'height' => 'auto');
-        parent::__construct('shng-carousel-widget', '神农谷-图片轮播效果挂件', $widget_ops, $control_ops);
+        parent::__construct('shng-carousel-widget', '神农谷-首页-图片轮播效果挂件', $widget_ops, $control_ops);
     }
 
 

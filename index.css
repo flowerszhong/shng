@@ -10,8 +10,8 @@
 .slideBox .prev,
 .slideBox .next{ position:absolute; left:10%; top:50%; margin-top:-25px; display:block; width:32px; height:100px; background:url(images/slider-arrow.png) -110px 5px no-repeat; filter:alpha(opacity=50);opacity:0.5;   }
 .slideBox .next{ left:auto; right:10%; background-position:8px 5px; }
-.slideBox .prev{background: url(images/banner_left.png) no-repeat;}
-.slideBox .next{background: url(images/banner_right.png) no-repeat;}
+.slideBox .prev{background: url() no-repeat;}
+.slideBox .next{background: url() no-repeat;}
 .slideBox .prev:hover,
 .slideBox .next:hover{ filter:alpha(opacity=100);opacity:1;  }
 .slideBox .prevStop{ display:none;  }
@@ -36,7 +36,7 @@
 }
 .index_intro .intro_logo{
 	width:330px;
-	height: 130px; background:url(images/intro_logo.gif) no-repeat;
+	height: 130px; background:url() no-repeat;
 	margin: 30px 30px 0 0; float:right;
 	overflow: hidden
 }

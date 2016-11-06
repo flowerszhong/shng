@@ -22,7 +22,7 @@
 			</a>
 			</h3>
 			<div class="archive-item-meta">
-				<i class="iconfont">&#xe600;</i>&nbsp;作者：<?php the_author(); ?> &nbsp;&nbsp;&nbsp;&nbsp;<i class="iconfont">&#xe601;</i>&nbsp;时间：<?php the_time('Y-m-d');?> &nbsp;&nbsp;&nbsp;&nbsp;<i class="iconfont">&#xe602;</i>&nbsp;访问：298
+				<i class="iconfont">&#xe600;</i>&nbsp;作者：<?php the_author(); ?> &nbsp;&nbsp;&nbsp;&nbsp;<i class="iconfont">&#xe601;</i>&nbsp;时间：<?php the_time('Y-m-d');?> &nbsp;&nbsp;&nbsp;&nbsp;<i class="iconfont">&#xe602;</i>&nbsp;访问：<?php post_views('','',true); ?>
 			</div>
 		</div>
 		<div class="archive-item-description">
