@@ -46,7 +46,7 @@ function shng_setup() {
 	register_nav_menus( array(
         'primary' => esc_html__( 'Primary', 'shng' ),
         'footer' => esc_html__( 'Footer', 'shng' ),
-		'friendlinks' => esc_html__( 'Friend Links', 'shng' ),
+		'friendlink' => esc_html__( 'Friend Link', 'shng' ),
 	) );
 
 	/*
@@ -66,6 +66,13 @@ function shng_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+
+    add_image_size( 'gallery', 228, 168,true );
+    add_image_size( 'slide', 808, 560,true );
+    add_image_size( 'carousel', 386, 330,true );
+    add_image_size( 'media', 90, 60,true );
+
 }
 endif;
 add_action( 'after_setup_theme', 'shng_setup' );
@@ -346,7 +353,7 @@ function custom_breadcrumbs($before='当前位置：',$separator=' &raquo; ',$ho
 }
 
 
-function get_post_img( $id = null,$width="200",$height="150") {
+function get_post_img( $id = null,$width="200",$height="150",$size=null) {
     if( $id ){
         $post = get_post($id);
         $post_id = $id;
@@ -356,6 +363,13 @@ function get_post_img( $id = null,$width="200",$height="150") {
     }
 
     if(has_post_thumbnail( $post )){
+        set_post_thumbnail_size( $width, $height );
+
+        if($size){
+            $attachment_id = get_post_thumbnail_id( $post_id );
+            $thumb_url = wp_get_attachment_image_src( $attachment_id, $size ,true);
+            return $thumb_url[0];
+        }
         return get_the_post_thumbnail_url( $post);
     }
 

@@ -44,7 +44,7 @@ class SHNG_Carousel_Widget extends SHNG_Posts_Widget {
                 $post_title = esc_attr(get_the_title());
                 $post_url = get_permalink();
                 $post_id = get_the_id();
-                $post_img = get_post_img($post_id,$width="386",$height="330");
+                $post_img = get_post_img($post_id,$width="386",$height="330",$size='carousel');
                 ?>
                 <li class="carousel-item">
                 <a href="<?php echo $post_url; ?>" class="carousel-link">

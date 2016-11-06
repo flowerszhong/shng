@@ -47,7 +47,7 @@ class SHNG_Media_Widget extends SHNG_Posts_Widget {
 
                 $post_url = get_permalink();
 
-                $img_url = get_post_img();
+                $img_url = get_post_img(null,90,60,'media');
 
                 ?>
                 <li class="media-item">

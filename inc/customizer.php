@@ -34,15 +34,32 @@ function twentyfifteen_customize_register( $wp_customize ) {
 		'priority' => 113,
 	));
 
+   $wp_customize->add_setting('wechat_image',array(
+        'default'=> get_template_directory_uri() . '/assets/images/wechat.jpg',
+    ));
+
+
+    $wp_customize->add_control(
+       new WP_Customize_Image_Control(
+           $wp_customize,
+           'wechat_image',
+           array(
+               'label'      => '网站（微信）二维码',
+               'section'    => 'footer_info',
+               'settings'   => 'wechat_image',
+           )
+       )
+   );
+
 	$footer_settings = array(
 		'copyright'=>array(
 			'label'=>'版权声明',
-			'default'=>'Copyright&copy;2016',
-			'type'=>'text',
+			'default'=>'Copyright © 2010 - 2016 http://shennongu.com All Rights Reserved. 神农谷 版权所有',
+			'type'=>'textarea',
 			),
 		'address'=>array(
 			'label'=>'地址',
-			'default'=>'茂名市高新区',
+			'default'=>'中国湖南省株洲市炎陵县神农谷风景区',
 			'type'=>'text',
 			),
 		'postcode'=>array(
@@ -67,12 +84,12 @@ function twentyfifteen_customize_register( $wp_customize ) {
 			),
 		'support'=>array(
 			'label'=>'技术支持',
-			'default'=>'Hades',
+			'default'=>'http://quickweb.mzh.ren',
 			'type'=>'text',
 			),
 		'icp'=>array(
 			'label'=>'备案号',
-			'default'=>'粤ICP备16032304号',
+			'default'=>'湘ICP备16016951号',
 			'type'=>'text',
 			),
 		'poilcebeian'=>array(
@@ -143,6 +160,37 @@ function shng_index_intro($wp_customize)
 }
 
 
+//记录浏览次数
+if(!function_exists('record_visitors')){
+    function record_visitors(){
+        if (is_singular())
+        {
+          global $post;
+          $post_ID = $post->ID;
+          if($post_ID)
+          {
+              $post_views = (int)get_post_meta($post_ID, 'views', true);
+              if(!update_post_meta($post_ID, 'views', ($post_views+1)))
+              {
+                add_post_meta($post_ID, 'views', 1, true);
+              }
+          }
+        }
+    }
+}
+
+add_action('wp_head', 'record_visitors');
+
+
+function post_views($before = '(浏览 ', $after = ' 次)', $echo = 1){
+      global $post;
+      $post_ID = $post->ID;
+      $views = (int)get_post_meta($post_ID, 'views', true);
+      if ($echo) echo $before, number_format($views), $after;
+      else return $views;
+}
+
+
 add_action( 'customize_register', 'shng_customize_slide' );
 
 function shng_customize_slide($wp_customize) {  
@@ -161,7 +209,7 @@ function shng_customize_slide($wp_customize) {
         $setting_name = $slide_prefix . $i;
         $slide_label = '幻灯片 ' . $i;
         $wp_customize->add_setting( $setting_name, array(
-            'default'        => '',
+            'default'=> '',
         ) );
         $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $setting_name, array(
             'label'   => $slide_label,
@@ -228,6 +276,73 @@ function render_slider_controls()
 }
 
 
+add_action( 'customize_register', 'shng_customize_kf' );
+
+function shng_customize_kf($wp_customize) {  
+
+    global $kf_prefix;
+    $kf_prefix = 'shng_kf_';
+    global $kf_length;
+    $kf_length = 3;
+
+    $wp_customize->add_section( 'kf', array(
+        'title'          => __('客服','shng'),
+        'priority'       => 114,
+    ) );
+
+    $wp_customize->add_setting(
+        'shng_kf_office',
+        array('default'=>__('400-800-100','shng'))
+    );
+
+    $wp_customize->add_control(
+            'shng_kf_office',
+            array(
+                'label' => '客服电话',
+                'section' => 'kf',
+                'type' => 'text',
+            )
+        );
+
+    for ($i=1; $i <= $kf_length; $i++) { 
+        $kf_setting = $kf_prefix . 'qq_' . $i;
+        $kf_label = '客服 QQ ' . $i .' (格式：昵称||QQ号)';
+
+
+        $wp_customize->add_setting(
+            $kf_setting,
+            array(
+                'default' => __('可可||123456','shng'),
+            )
+        );
+
+        $wp_customize->add_control(
+            $kf_setting,
+            array(
+                'label' => $kf_label,
+                'section' => 'kf',
+                'type' => 'text',
+            )
+        );
+    }
+}
+
+function render_kf_contact()
+{   
+    $kf_dom = '<ul>';
+    for ($i=1; $i <=3 ; $i++) { 
+        $kf_prefix = 'shng_kf_qq_';
+        $setting_name = $kf_prefix . $i;
+        $kf = get_theme_mod( $setting_name );
+        if(!empty($kf)){
+            $kf_array = explode('||', $kf);
+            $kf_dom .= '<li><a href="'. $kf_array[1] . '">'. $kf_array[0].'</a></li>';
+        }
+    
+    }
+    $kf_dom .= '</ul>';
+    echo $kf_dom;
+}
 
 
 

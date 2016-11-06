@@ -20,7 +20,7 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-		<i class="iconfont">&#xe600;</i>&nbsp;作者：<?php the_author(); ?>&nbsp;&nbsp;&nbsp;&nbsp;<i class="iconfont">&#xe601;</i>&nbsp;时间：<?php the_time('Y-m-d'); ?>&nbsp;&nbsp;&nbsp;&nbsp;<i class="iconfont">&#xe602;</i>&nbsp;访问：298
+		<i class="iconfont">&#xe600;</i>&nbsp;作者：<?php the_author(); ?>&nbsp;&nbsp;&nbsp;&nbsp;<i class="iconfont">&#xe601;</i>&nbsp;时间：<?php the_time('Y-m-d'); ?>&nbsp;&nbsp;&nbsp;&nbsp;<i class="iconfont">&#xe602;</i>&nbsp;访问：<?php post_views('','次',true); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>

@@ -1,8 +1,17 @@
 <?php 
-if(has_nav_menu( 'friendlinks' )){
-	wp_nav_menu( array( 'theme_location' => 'friendlinks', 'menu_id' => 'friendlinks','menu_class'=>'friendlinks link' ) );
+if(has_nav_menu( 'friendlink' )){
+	wp_nav_menu( array(
+	    'theme_location' => 'friendlink',
+	    'menu_id'        => 'friendlink-menu',
+	    'menu_class'     => 'friendlink',
+	    'container_id'   => 'friendlink-nav',
+	    'container_class'=> 'friendlink-nav',
+	    'items_wrap' => '<ul id="%1$s" class="%2$s"><li class="footer-link-label"><a>友情链接:</a></li>%3$s</ul>',
+	) );
+
+
 }else{ ?>
-<div class="link"> <strong>友情链接：</strong>
+<div class="link friendlink"> <strong>友情链接：</strong>
 	    <a href="http://www.shiyanhu.com/" target="_blank">石燕湖旅游</a>
 	    <a href="http://www.hnoutward.com/" target="_blank">石燕湖拓展</a>
 	    <a href="http://www.lvyou67.com/" target="_blank">厦门美好时光旅游网</a>

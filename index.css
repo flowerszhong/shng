@@ -5,7 +5,7 @@
 .slideBox .hd ul li.on{ background:#f00; color:#fff; }
 .slideBox .bd{ position:relative; height:100%; z-index:0;   }
 .slideBox .bd li{ zoom:1; vertical-align:middle; }
-.slideBox .bd img{  display:block;  }
+.slideBox .bd img{  display:block; width: 100%; }
 
 .slideBox .prev,
 .slideBox .next{ position:absolute; left:10%; top:50%; margin-top:-25px; display:block; width:32px; height:100px; background:url(images/slider-arrow.png) -110px 5px no-repeat; filter:alpha(opacity=50);opacity:0.5;   }

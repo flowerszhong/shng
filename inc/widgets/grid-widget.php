@@ -40,12 +40,12 @@ class SHNG_Grid_Widget extends SHNG_Posts_Widget {
                     $post_title = esc_attr(get_the_title());
                     $post_url = get_permalink();
                     $post_id = get_the_id();
-                    $post_img = get_post_img($post_id,$width="228",$height="168");
+                    $post_img = get_post_img($post_id,$width="228",$height="168",$size='gallery');
                     ?>
 
                     <li class="grid-item">
                     <a href="<?php echo $post_url; ?>" class="grid-link">
-                    <p class="grid-title"">
+                    <p class="grid-title">
                         <?php echo $post_title; ?>
                     </p>
                     <img src="<?php echo $post_img; ?>" width="228" height="168" />

@@ -15,14 +15,20 @@
 
 	<div class="footer">
 	  <div class="contain">
-	  <?php get_template_part( 'parts/footer', 'menu' ); ?>
-	  <?php get_template_part( 'parts/footer', 'friendlink' ); ?>
+		  <div class="site-wechat">
+		  	<img src="<?php echo get_theme_mod( 'wechat_image', 'false' ); ?>" alt="网站二维网" />
+		  </div>
+		  <?php get_template_part( 'parts/footer', 'menu' ); ?>
+		  <?php get_template_part( 'parts/footer', 'friendlink' ); ?>
 
-	   <div class="address"> 地址：中国湖南省岳阳平江石牛寨景区 </div>
-	   <div class="copyright">
-	      Copyright © 2010 - 2016 www.shiniuzhai.com All Rights Reserved. 石牛寨 版权所有 <br>
-	      湘ICP备12010097号
-	    </div>
+		   <div class="address"> 地址：
+		   <?php echo get_theme_mod( 'address', '中国湖南省株洲市炎陵县神农谷风景区' ); ?> </div>
+		   <div class="copyright">
+		   <?php echo get_theme_mod( 'copyright', 'Copyright © 2010 - 2016 http://shennongu.com All Rights Reserved. 神农谷 版权所有' ); ?>
+		    </div>
+		    <div class="icp">
+		    	<?php echo get_theme_mod( 'icp', '湘ICP备16016951号' ); ?>
+		    </div>
 	  </div>
 	</div>
 
@@ -30,9 +36,11 @@
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'shng' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'shng' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'shng' ), 'shng', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			Theme Shng By <?php echo get_theme_mod( 'support', 'http://quickweb.mzh.ren' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
+
+	<?php get_template_part( 'parts/footer', 'kf' ); ?>
 
 <?php wp_footer(); ?>
 
